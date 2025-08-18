@@ -2,8 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 import time
-import sqlite3
-import pandas as pd
 
 from database.insert_price import salvar_preco
 
@@ -38,8 +36,3 @@ for nome, url in urls.items():
     salvar_preco(titulo, preco, data)
     print(f"Salvo: {titulo} | {preco} | {data}")
     time.sleep(2)
-
-conn = sqlite3.connect("precos.db")
-df = pd. read_sql("SELECT * FROM precos", conn)
-print(df.head())
-conn.close()
