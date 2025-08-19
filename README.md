@@ -32,7 +32,6 @@ amazon-web-scraper/
 │── scraping/
 │   └── multiple_products.py   # Scraping (nome + preço → banco)
 │
-│── precos.db                  # SQLite database
 │── requirements.txt           # Lista de dependências
 ```
 
