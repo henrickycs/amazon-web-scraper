@@ -18,21 +18,21 @@
 ```bash
 amazon-web-scraper/
 │── analysis/
-│   ├── analyze_price.py       # Geração de gráficos
-│   ├── export_data.py         # Exportação em CSV
+│   ├── analyze_price.py       Geração de gráficos
+│   ├── export_data.py         Exportação em CSV
 │
 │── database/
-│   ├── setup_db.py            # Inicialização do SQLite
-│   └── insert_price.py        # Função para salvar dados
+│   ├── setup_db.py            Inicialização do SQLite
+│   └── insert_price.py        Função para salvar dados
 │
 │── gui/
-│   ├── app.py                 # Interface completa
-│   └── table.py               # Janela com tabela de histórico
+│   ├── app.py                 Interface completa
+│   └── table.py               Janela com tabela de histórico
 │
 │── scraping/
-│   └── multiple_products.py   # Scraping (nome + preço → banco)
+│   └── multiple_products.py   Scraping (nome + preço → banco)
 │
-│── requirements.txt           # Lista de dependências
+│── requirements.txt           Lista de dependências
 ```
 
 
