@@ -9,7 +9,6 @@ def analisa_preco():
 
         conn.close()
 
-        #converter para float
         df["preco_num"] = (
             df["preco"]
             .str.replace("R$", "", regex=False)
@@ -18,13 +17,10 @@ def analisa_preco():
             .astype(float)
         )
 
-        #converter para datetime
         df["data_coleta"] = pd.to_datetime(df["data_coleta"])
 
         print(df[["produto", "preco", "preco_num", "data_coleta"]].head())
 
-
-        #grafico por produto
         for produto, grupo in df.groupby("produto"):
             plt.figure(figsize=(8,4))
             plt.plot(grupo["data_coleta"], grupo["preco_num"], marker="o")
