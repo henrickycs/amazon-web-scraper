@@ -1,17 +1,18 @@
 import sqlite3
 
-conn = sqlite3.connect("precos.db")
-cursor = conn.cursor()
+def inicializar_banco():
+    conn = sqlite3.connect("precos.db")
+    cursor = conn.cursor()
 
-cursor.execute("""
-CREATE TABLE IF NOT EXISTS precos (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    produto TEXT NOT NULL,
-    preco TEXT,
-    data_coleta TEXT NOT NULL
-)
-""")
+    # Tabela de preços
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS precos (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT,
+            preco TEXT,
+            data_coleta TEXT
+        )
+    """)
 
-print("Tabela criada")
-conn.commit()
-conn.close()
+    conn.commit()
+    conn.close()
